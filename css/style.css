@@ -301,7 +301,7 @@ nav{
 }
 
 .certificate:hover {
-    box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
+    box-shadow: 0 4px 10px rgba(16, 29, 48, .26);
     color: #fff;
     background: #848484;
     transition: .5s;    
