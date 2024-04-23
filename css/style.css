@@ -68,7 +68,7 @@ nav{
 
 .nav .enlaces-header a:hover{
     color: #FFF;
-    background-color: #d03d3d;
+    background-color: #bcafaf;
     border-color: #261f1f;
     transition: all ease-in-out .6s;
 }
@@ -120,7 +120,7 @@ nav{
     margin: 28px 0 0 0;
     width: 150px;
     display: inline-block;
-    background-color: #d03d3d;
+    background-color: #493131;
     text-align: center;
     color: #ffffff;
     padding: 12px 0;
@@ -285,7 +285,7 @@ nav{
 
 .certificate {
     background-color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     width: 22%;
     padding: 15px;
