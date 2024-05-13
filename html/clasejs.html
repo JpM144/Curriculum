@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body onload="load_page()">
+
+        <div>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" autocomplete="off">
+            </div>
+            <div>
+                <label for="Last_name">Last_Name</label>
+                <input type="text" id="last_name" autocomplete="off">
+            </div>
+            <div>
+                <label for="Password">Password</label>
+                <input type="password" id="password" autocomplete="off">
+            </div>
+            <div>
+                <label for="Repeat password">Repeat Password</label>
+                <input type="password" id="repeat" autocomplete="off">
+            </div>
+            <div>
+                <button onclick="send_info()">ENVIAR</button>
+            </div>
+            <div id="print"></div>
+        </div>
+
+
+
+
+
+
+    <!-- ARCHIVO JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../js/funtion.js"></script>
+
+    <!-- <script>
+        alert("HOLA SOY UN ALERT");
+    </script> -->
+</body>
+
+</html>
