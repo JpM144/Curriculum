@@ -51,6 +51,45 @@ function load_page() {
     //     showConfirmButton: false
     // });
 
+    // document.getElementById("fecha").value = new Date();
+    let fecha = new Date();
+    document.getElementById("dia").innerText = fecha.getDay();
+
+    // document.getElementById("year").value = new Date();
+    let año = new Date();
+    document.getElementById("año").innerText = año.getFullYear();
+
+    // document.getElementById("month").value = new Date();
+    let mes = new Date();
+    document.getElementById("month").innerText = mes.getMonth();
+
+    // document.getElementById("date").value = new Date();
+    let dia = new Date();
+    document.getElementById("date").innerText = dia.getDate();
+
+    // document.getElementById("hour").value = new Date();
+    let hora = new Date();
+    document.getElementById("hours").innerText = hora.getHours();
+
+    // document.getElementById("minutes").value = new Date();
+    let minutes = new Date();
+    document.getElementById("minutes").innerText = minutes.getMinutes();
+
+    // document.getElementById("segundos").value = new Date();
+    let seconds = new Date();
+    document.getElementById("seconds").innerText = seconds.getSeconds();
+
+    // document.getElementById("milosegundos").value = new Date();
+    let miliseconds = new Date();
+    document.getElementById("milisecods").innerText = miliseconds.getMilliseconds();
+
+    // document.getElementById("tiempo").value = new Date();
+    let time = new Date();
+    document.getElementById("time").innerText = time.getTime();
+
+        // document.getElementById("zona horaria").value = new Date();
+        let ZoneOff = new Date();
+        document.getElementById("TimeZoneOff").innerText = ZoneOff.getSeconds();
 }
 
 function send_info() {
@@ -64,9 +103,9 @@ function send_info() {
             text: "Algunos de los campos se encuentran vacios",
             icon: "error"
         });
-        
-        
-        
+
+
+
     } else if (name.length == 0) {
         document.getElementById("name").style.border = "2px solid red"
     } else if (Last_name.length == 0) {
@@ -90,7 +129,7 @@ function send_info() {
             showConfirmButton: false,
             timer: 1500
         });
-        
+
     }
 }
 
@@ -132,7 +171,7 @@ while (j < array_num.length) {
 accu = 0;
 for (var h = 0; h < array_num.length; h++) {
     accu += array_num[h]
-    
+
 }
 console.log(accu);
 
@@ -149,20 +188,20 @@ function aggfirst() {
     let valor = document.getElementById("agnum").value;
     array_ejm.unshift(valor);
     document.getElementById("valores").value = array_ejm;
-    
+
 }
 function aggend() {
     let valor = document.getElementById("agnum").value;
     array_ejm.shift(valor);
     document.getElementById("valores").value = array_ejm;
-    
+
 }
 
 function agregar() {
     let valor = document.getElementById("agnum").value;
     array_ejm.push(valor);
     document.getElementById("valores").value = array_ejm;
-    
+
 }
 
 function eliminar() {
@@ -174,10 +213,60 @@ function reverse() {
     document.getElementById("valores").value = array_ejm.reverse();
 }
 
-function limpiar() {   
-    document.getElementById("agnum").value = ""; 
+function limpiar() {
+    document.getElementById("agnum").value = "";
     document.getElementById("valores").value = ""
     document.getElementById("print_age").innerHTML = " ";
+
+}
+
+//funcion para enviar el nombre concatenado
+function send_name() {
+    let name_one = document.getElementById("name_one").value;
+    let name_two = document.getElementById("name_two").value;
+    let search_var = document.getElementById("search_var").value;
+    let name_com = name_one.toUpperCase() + name_two.toUpperCase();
+    // let variable = name_com.indexOf("U");
+    let variable = name_com.charAt(search_var);
+
+
+    if (name_com == 0) {
+        Swal.fire({
+            title: "Campos vacios",
+            text: "Algunos de los campos se encuentran vacios",
+            icon: "error"
+        });
+        document.getElementById("name_one").style.border = "2px solid red"
+        document.getElementById("name_two").style.border = "2px solid red"
+
+
+
+    } else {
+        if (search_var > name_com.length && search_var != 0) {
+            Swal.fire({
+                icon: "error",
+                title: "El valor supera la cantidad de letras del nombre o el campo de ingreso esta vacio",
+                timer: 1500
+            });
+            document.getElementById("print_name").innerText = "";
+
+
+        }
+        else if (isNaN(search_var)) {
+            Swal.fire({
+                icon: "error",
+                title: "El valor no es un numero",
+                timer: 1500
+            });
+            document.getElementById("print_name").innerText = "";
+
+        }
+        else {
+            swal.fire(variable);
+            document.getElementById("print_name").innerText = "La letra correspondiente al #" + search_var + " es: " + variable;
+        }
+    }
+
 
 }
 
