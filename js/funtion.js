@@ -89,7 +89,7 @@ function load_page() {
 
         // document.getElementById("zona horaria").value = new Date();
         let ZoneOff = new Date();
-        document.getElementById("TimeZoneOff").innerText = ZoneOff.getSeconds();
+        document.getElementById("TimeZoneOff").innerText = ZoneOff.getTimezoneOffset();
 }
 
 function send_info() {
