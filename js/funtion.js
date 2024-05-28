@@ -131,6 +131,7 @@ function send_info() {
         });
 
     }
+
 }
 
 //arrays
@@ -190,7 +191,7 @@ function aggfirst() {
     document.getElementById("valores").value = array_ejm;
 
 }
-function aggend() {
+function deletend() {
     let valor = document.getElementById("agnum").value;
     array_ejm.shift(valor);
     document.getElementById("valores").value = array_ejm;
@@ -263,7 +264,7 @@ function send_name() {
         }
         else {
             swal.fire(variable);
-            document.getElementById("print_name").innerText = "La letra correspondiente al #" + search_var + " es: " + variable;
+            document.getElementById("print_name").innerText = "La letra correspondiente al #" + search_var + " es: " + variable;   
         }
     }
 
